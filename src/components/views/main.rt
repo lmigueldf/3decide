@@ -1,6 +1,27 @@
 <rt-import name="D3Chart" from="../components/D3Chart"/>
+
+<rt-import name="Paper" from="material-ui/Paper"/>
+<rt-import name="AppBar" from="material-ui/AppBar"/>
+<rt-import name="TextField" from="material-ui/Textfield"/>
 <div>
   <h2>3Decide : NOS Engineering Topologies Viewer</h2>
+
   <p>{this.state.demoText}</p>
-  <D3Chart />
+  <D3Chart/>
+  <br/>
+  <Paper.default>
+    <div style="padding: 10px">
+      <h2>Material UI example integration
+        <span style="font-size: large;font-style: italic">
+          <a href="//www.material-ui.com/">More details can be found here</a>
+        </span>
+      </h2>
+      <AppBar.default
+        title="Title"
+        iconClassNameRight="muidocs-icon-navigation-expand-more"
+      />
+      <TextField.default floatingLabelText="TextField"
+                         underlineShow="{true}"/>
+    </div>
+  </Paper.default>
 </div>

@@ -2,7 +2,6 @@
 React base project using react templates and D3 charts integration
 
 
-
 ### Installation
 1) Clone this repo: https://github.com/lmigueldf/3decide.git
 > Run: npm install 
@@ -21,6 +20,7 @@ Includes:
 Package contains:
 - React;
 - React Templates;
+- Material-UI Design components;
 - ES6 with babel;
 - ESLint;
 - Sass compiler;
