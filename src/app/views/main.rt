@@ -1,0 +1,22 @@
+<rt-import name="D3Chart" from="../components/D3Chart"/>
+
+<rt-import name="Paper" from="material-ui/Paper"/>
+<rt-import name="RefreshIndicator" from="material-ui/RefreshIndicator"/>
+<div>
+  <Paper.default>
+    <div style="padding: 25px">
+      <h2>3Decide : NOS Engineering Topologies Viewer</h2>
+      <div rt-if="!this.state.isLoading">
+        <D3Chart chartType="{this.state.chartType}"/>
+      </div>
+      <div rt-if="this.state.isLoading">
+        <RefreshIndicator.default
+          size="{40}"
+          left="{window.innerWidth / 2 - 40}"
+          top="{100}"
+          status="loading"
+        />
+      </div>
+    </div>
+  </Paper.default>
+</div>
