@@ -1,0 +1,16 @@
+.login_body{
+  background-color: azure
+}
+.panel{
+  width: 30%;
+  height: 350px;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  .title{
+    text-align: center
+  }
+}
