@@ -27,7 +27,7 @@ class AppComponent extends React.Component {
     this.setState({isLoading: loading});
   }
 
-  onTopologyLoaded(data) {
+  onTopologyLoaded() {
     // Handle topology data to build the topology graphic view
   }
 

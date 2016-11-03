@@ -1,7 +1,6 @@
 import React from 'react';
 import Constants from '../helpers/Constants';
-import Actions from '../flux/actions/ActionCreators';
-import AppStore from '../flux/stores/AppStore';
+import Redirect from '../helpers/Redirect';
 class AppComponent extends React.Component {
   constructor(props) {
     super(props);
@@ -21,19 +20,27 @@ class AppComponent extends React.Component {
   }
 
   login(){
-    let user = this.refs.username.input.value;
-    let password = this.refs.password.input.value;
     /**
      * Validate UI values
      */
-    if(user === ''){}
+    setTimeout((()=>{
+      // logged with success :P
+      this.setState({
+        redirect: true
+      })
+    }).bind(this), 5000);
 
 
     //Actions.login(user, password);
   }
 
   render() {
-    return Constants.Helpers.carryScope(this, require('../views/login.rt'))();
+    if (this.state.redirect) {
+      return <Redirect location="/main"/>;
+    } else {
+      return Constants.Helpers.carryScope(this, require('../views/login.rt'))();
+    }
   }
+
 }
 module.exports = AppComponent;

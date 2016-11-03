@@ -12,7 +12,7 @@ require('styles/main.scss');
 module.exports = React.createClass({
   render(){
     return (
-      <Locations hash={true}>
+      <Locations >
         <Location path={'/'} handler={Login}/>
         <Location path={'/main'} handler={Main}/>
         <Location path={'/d3'} handler={D3Chart}/>

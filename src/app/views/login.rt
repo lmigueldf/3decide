@@ -42,7 +42,7 @@
             <RaisedButton.default
               style="{{width: '100%'}}"
               label="Log in"
-              onTouchTap="{this.login.bind(this)}"
+              onTouchTap="()=>this.login()"
             />
           </div>
           <div class="col-xs-2"></div>
